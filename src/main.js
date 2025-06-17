@@ -10,6 +10,7 @@ import {
   Navigation,
   Pagination,
   Scrollbar,
+  Autoplay,
 } from "swiper/modules";
 
 // import Swiper and modules styles
@@ -52,6 +53,10 @@ const swiper02 = new Swiper(".swiper02", {
   scrollbar: {
     el: ".swiper-scrollbar",
     hide: true,
+  },
+  a11y: {
+    prevSlideMessage: "前へ",
+    nextSlideMessage: "次へ",
   },
 });
 
@@ -146,6 +151,29 @@ const swiper08 = new Swiper(".swiper08", {
       shadow: true,
       translate: ["125%", 0, -800],
       rotate: [0, 0, 90],
+    },
+  },
+});
+
+const progressCircle = document.querySelector(".autoplay-progress svg");
+const progressContent = document.querySelector(".autoplay-progress span");
+const swiper09 = new Swiper(".swiper09", {
+  modules: [Autoplay, Pagination],
+  spaceBetween: 20,
+  centeredSlides: true,
+  loop: true,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  on: {
+    autoplayTimeLeft(s, time, progress) {
+      progressCircle.style.setProperty("--progress", 1 - progress);
+      progressContent.textContent = `${Math.ceil(time / 1000)}s`;
     },
   },
 });

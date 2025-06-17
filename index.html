@@ -18,7 +18,7 @@
         <h1 class="hero__title">slidefolio</h1>
         <p class="hero__text">
           いろいろなスライダー系モジュールを試しながら、<br
-            class="--mobile-only"
+            class="mobile-only"
           />活用の幅を広げていく練習サイトです。
         </p>
       </div>
@@ -48,6 +48,45 @@
           <div class="swiper-slide"><p class="swiper-text">Slide 6</p></div>
         </div>
         <div class="swiper-pagination"></div>
+      </div>
+      <div class="swiper swiper09">
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <video
+              loop
+              muted
+              autoplay
+              playsinline
+              src="/src/movie/alien.mp4"
+            ></video>
+          </div>
+          <div class="swiper-slide">
+            <video
+              loop
+              muted
+              autoplay
+              playsinline
+              src="/src/movie/astronaut.mp4"
+            ></video>
+          </div>
+          <div class="swiper-slide">
+            <video
+              loop
+              muted
+              autoplay
+              playsinline
+              src="/src/movie/encounter.mp4"
+            ></video>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="autoplay-progress">
+          <svg viewBox="0 0 48 48">
+            <circle cx="24" cy="24" r="20"></circle>
+          </svg>
+          <span></span>
+        </div>
       </div>
       <div class="swiper swiper02">
         <div class="swiper-wrapper">
@@ -109,7 +148,6 @@
           <div class="swiper-slide"><p class="swiper-text">Slide 5</p></div>
           <div class="swiper-slide"><p class="swiper-text">Slide 6</p></div>
         </div>
-        <div class="swiper-pagination"></div>
       </div>
       <div class="swiper swiper08">
         <div class="swiper-wrapper">
@@ -121,7 +159,6 @@
           <div class="swiper-slide"><p class="swiper-text">Slide 5</p></div>
           <div class="swiper-slide"><p class="swiper-text">Slide 6</p></div>
         </div>
-        <div class="swiper-pagination"></div>
       </div>
     </section>
     <script type="module" src="/src/main.js"></script>
